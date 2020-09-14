@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--This file helps web browser to locate resources on the server-->
+<web-app>
+    <servlet>
+        <servlet-name>login</servlet-name> <!--Self-defined name for servlet-->
+        <servlet-class>Servlet.LoginServlet</servlet-class><!--Corresponding java class-->
+    </servlet>
+    <servlet-mapping><!--for accessing same resource via different paths-->
+        <servlet-name>login</servlet-name>
+        <url-pattern>/log</url-pattern><!--can also access servlet named login via url /log-->
+        <url-pattern>/login</url-pattern><!--can also access servlet named login via url /login-->
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>register</servlet-name> <!--Self-defined name for servlet-->
+        <servlet-class>Servlet.RegisterServlet</servlet-class><!--Corresponding java class-->
+    </servlet>
+    <servlet-mapping><!--for accessing same resource via different paths-->
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern><!--can also access servlet named login via url /log-->
+        <url-pattern>/reg</url-pattern><!--can also access servlet named login via url /login-->
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>favicon</servlet-name> <!--Self-defined name for servlet-->
+        <servlet-class>Servlet.FaviconServlet</servlet-class><!--Corresponding java class-->
+    </servlet>
+    <servlet-mapping><!--for accessing same resource via different paths-->
+        <servlet-name>favicon</servlet-name>
+        <url-pattern>/favicon</url-pattern><!--can also access servlet named login via url /log-->
+        <url-pattern>/favicon.ico</url-pattern><!--can also access servlet named login via url /login-->
+    </servlet-mapping>
+</web-app>
